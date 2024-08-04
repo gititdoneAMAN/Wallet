@@ -21,6 +21,7 @@ const layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
             title="Transactions"
             icon={<TransactionsIcon />}
           />
+          <SidebarItem href="/p2p" title="P2P" icon={<TransactionsIcon />} />
         </div>
       </div>
       {children}
