@@ -14,7 +14,7 @@ app.post("/hdfcWebhook", async (req, res) => {
     amount: string;
   } = {
     token: req.body.token,
-    userId: req.body.userIdentifier,
+    userId: req.body.userId,
     amount: req.body.amount,
   };
   try {
@@ -42,6 +42,7 @@ app.post("/hdfcWebhook", async (req, res) => {
       msg: "Captured",
     });
   } catch (e) {
+    console.log(e);
     res.status(411).json({
       message: "Error while processing webhook",
     });
